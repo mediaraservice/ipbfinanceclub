@@ -1,0 +1,66 @@
+.logo-light {
+  @apply hidden;
+}
+
+.navbar-nav {
+  .nav-item {
+    .nav-link {
+      @apply font-medium relative tracking-wide flex items-center py-1.5 px-3.5 text-default-800 rounded-md text-sm cursor-pointer transition-all duration-300 bg-transparent;
+
+      &:is(.active, :active, :focus, :hover) {
+        @apply text-primary;
+      }
+    }
+
+    .nav-item {
+      .nav-item {
+        .nav-link {
+          @apply text-default-800;
+        }
+      }
+    }
+  }
+}
+
+/* // Navbar  */
+header {
+  &.nav-sticky {
+    @apply bg-white shadow;
+  }
+
+  &.dark {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          @apply text-default-100;
+
+          &:is(.active, :active, :focus, :hover) {
+            @apply text-primary;
+          }
+        }
+
+        .hs-dropdown-menu {
+          .nav-link {
+            @apply text-default-800;
+
+            &.active {
+              @apply text-primary;
+            }
+          }
+        }
+      }
+    }
+
+    &.nav-sticky {
+      .navbar-nav {
+        .nav-link {
+          @apply text-default-800 hover:text-primary;
+
+          &:is(.active, :active, :focus, :hover) {
+            @apply text-primary;
+          }
+        }
+      }
+    }
+  }
+}

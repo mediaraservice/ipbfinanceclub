@@ -1,0 +1,29 @@
+/* //
+// reboot.scss
+// */
+
+html {
+  @apply relative scroll-smooth;
+}
+
+body {
+  @apply font-body text-[15px] overflow-x-hidden text-default-500 bg-white;
+}
+
+.container {
+  @apply mx-auto max-w-[1152px] px-4;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-semibold;
+}
+
+.vertical-rl {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}

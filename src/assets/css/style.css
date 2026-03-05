@@ -1,0 +1,33 @@
+/*
+Template Name: Prompt - Tailwind CSS Multipurpose Landing Page Template
+Version: 2.1.0
+Author: coderthemes
+Email: support@coderthemes.com
+File: style Css File
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+
+
+@import "./theme.css";
+
+@import "./custom/_reboot.css";
+@import "./custom/_helper.css";
+@import "./custom/_navbar.css";
+@import "./custom/_gallery.css";
+
+
+/* Preline UI */
+@source "../node_modules/preline/dist/*.js";
+@import "preline/variants.css";
+
+/* Tailwind Plugin */
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+/* Iconify Icons */
+/* @plugin "@iconify/tailwind4" {
+    prefixes: tabler, lucide, fa6-solid, fa6-regular, fa6-brands, solar;
+} */
