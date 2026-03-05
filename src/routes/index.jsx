@@ -6,6 +6,8 @@ const Login = lazy(() => import('@/pages/auth/login/index'));
 const SignUp = lazy(() => import('@/pages/auth/signup/index'));
 const ForgotPassword = lazy(() => import('@/pages/auth/forget-pass/index'));
 const ConfirmMail = lazy(() => import('@/pages/auth/confirm/index'));
+const CreatePost = lazy(() => import('@/pages/account/create-post/index'));
+const Members = lazy(() => import('@/pages/account/members/index'));
 
 //Home Page
 const HomePage = lazy(() => import('@/pages/home/index'));
@@ -151,6 +153,18 @@ const authRoutes = [{
   path: '/account/dashboard',
   name: 'Dashboard',
   element: <Dashboard />
+}, {
+  path: '/account/create-post',
+  name: 'Create Post',
+  element: <CreatePost />
+}, {
+  path: '/account/create-post/:id',
+  name: 'Edit Post',
+  element: <CreatePost />
+}, {
+  path: '/account/members',
+  name: 'Members',
+  element: <Members />
 }];
 
 // public routes

@@ -12,8 +12,13 @@
   },
   "dependencies": {
     "@iconify/react": "^6.0.2",
+    "@monaco-editor/react": "^4.7.0",
     "@supabase/supabase-js": "^2.98.0",
     "@tailwindcss/vite": "^4.2.0",
+    "@tiptap/extension-image": "^3.20.0",
+    "@tiptap/extension-link": "^3.20.0",
+    "@tiptap/react": "^3.20.0",
+    "@tiptap/starter-kit": "^3.20.0",
     "aos": "^2.3.4",
     "glightbox": "^3.3.1",
     "jarallax": "^2.2.1",

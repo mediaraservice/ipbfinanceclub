@@ -1,17 +1,15 @@
-import Footer from './components/Footer';
-import Header from './components/Header';
-import RecentProject from './components/RecentProject';
-import Statistics from './components/Statistics';
-import Task from './components/Task';
+import Header from '@/components/dashboard/Header'
+import Footer from '@/components/dashboard/Footer'
+import Posts from './components/Posts'
 const Page = () => {
-  return <>
+  return (
+    <>
       <Header />
-      <div className="bg-default-100 mt-[77px]  py-3 px-3">
-        <Statistics />
-        <RecentProject />
-        <Task />
+      <div className="bg-default-100 pt-[77px]  py-3 px-3">
+        <Posts />
       </div>
       <Footer />
-    </>;
-};
-export default Page;
+    </>
+  )
+}
+export default Page

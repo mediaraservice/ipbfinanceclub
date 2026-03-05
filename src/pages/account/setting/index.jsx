@@ -1,6 +1,6 @@
 import AccountSetting from './components/AccountSetting';
-import Footer from './components/Footer';
-import Header from './components/Header';
+import Header from '@/components/dashboard/Header'
+import Footer from '@/components/dashboard/Footer'
 const Page = () => {
   return <>
       <Header />

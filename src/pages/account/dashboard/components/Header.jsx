@@ -4,6 +4,10 @@ import logolight from '@/assets/images/logo-light.png';
 import Icon from '@/components/wrappers/Icon';
 import { Link } from 'react-router-dom';
 import { FaBars, FaXmark } from 'react-icons/fa6';
+
+import { supabase } from '@/supabaseClient'
+import { useNavigate } from 'react-router-dom'
+
 const Header = () => {
   return <>
       <header className="@@link-color fixed top-0 inset-x-0 flex items-center z-40 w-full bg-white transition-all py-3.5">
@@ -167,10 +171,7 @@ const Header = () => {
                         <hr className="-mx-2 my-1 border-default-200" />
 
                         <div className="nav-item rounded hover:bg-default-100 transition-all">
-                          <Link className="nav-link !p-2" to="#">
-                            <Icon icon="tabler:lock" className="size-4 me-2" />
-                            Sign Out
-                          </Link>
+                          <LogoutButton />
                         </div>
                       </div>
                     </div>
@@ -246,4 +247,28 @@ const Header = () => {
       </div>
     </>;
 };
+
+const LogoutButton = () => {
+  const navigate = useNavigate()
+
+  const handleLogout = async () => {
+    // 1. Call Supabase sign out
+    const { error } = await supabase.auth.signOut()
+
+    if (error) {
+      console.error('Error logging out:', error.message)
+    } else {
+      // 2. Redirect user to login page after successful logout
+      navigate('/auth/login')
+    }
+  }
+
+  return (
+    <button onClick={handleLogout} className="nav-link !p-2">
+      <Icon icon="tabler:logout" className="size-4 me-2" />
+      <span>Logout</span>
+    </button>
+  )
+}
+
 export default Header;
