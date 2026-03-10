@@ -24,7 +24,7 @@ const Page = () => {
     if (error) {
       alert(error.message) // Show error (e.g., "Invalid login credentials")
     } else {
-      navigate('/') // Redirect to home/dashboard on success
+      navigate('/account/dashboard') // Redirect to home/dashboard on success
     }
     setLoading(false)
   }
@@ -35,13 +35,13 @@ const Page = () => {
         <div className="container">
           <div>
             <div className="bg-white shadow rounded mb-6">
-              <div className="grid md:grid-cols-12">
-                <div className="bg-white shadow-md p-12 rounded-s xl:col-span-5 md:col-span-6">
-                  <div className="mb-12">
+              <div className="grid">
+                <div className="bg-white shadow-md p-12 rounded-s max-w-100 mx-auto">
+                  {/* <div className="mb-12">
                     <Link to="/">
-                      <img src={logoDark} alt="logo-img" className="h-8" width={126} height={32} />
+                      <img src={logoDark} alt="logo-img" className="h-8" />
                     </Link>
-                  </div>
+                  </div> */}
                   <h6 className="text-base/[1.6] font-semibold text-default-600 mb-0 mt-4">Welcome back!</h6>
                   <p className="text-default-500 text-sm/[1.6] mt-1 mb-6">Enter your email address and password to access admin panel.</p>
 
@@ -95,6 +95,9 @@ const Page = () => {
                     </div>
                   </form>
                   {/* ... rest of your code ... */}
+                  <div className="mt-6 text-center">
+                    <p className="text-default-500 text-sm">Don't have an account? <Link to="/auth/signup" className="text-primary font-semibold hover:underline">Sign Up</Link></p>
+                  </div>
                 </div>
               </div>
             </div>

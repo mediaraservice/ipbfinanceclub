@@ -1,0 +1,42 @@
+import coworking2 from '@/assets/images/hero/coworking1.jpg' // Pastikan path gambar benar
+import Jarallax from '@/components/Jarallax'
+
+const Hero = () => {
+  return (
+    <>
+      <section className="pt-36 pb-24 relative">
+        <div className="container">
+          <div className="text-center">
+            <h1 className="text-3xl/tight sm:text-4xl/tight lg:text-5xl/tight font-semibold mb-5">
+              We are on a mission to
+              <span className="relative z-0 mx-2 after:bg-primary/30 after:-z-10 after:absolute md:after:h-6 sm:after:h-5 after:h-4 after:w-full after:bottom-0 after:end-0">
+                empower
+              </span>
+              financial literacy
+            </h1>
+            <p className="sm:text-lg text-default-500 max-w-3xl mx-auto">
+              IPB Finance Club (IFC) adalah wadah bagi mahasiswa untuk mengeksplorasi dunia keuangan, investasi, dan manajemen aset di bawah naungan
+              IPB University.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        {/* <span className="flex justify-center items-center relative z-20 translate-y-1/2">
+          <div className="bg-primary text-white rounded-md text-sm font-semibold flex-none shadow shadow-primary/20 cursor-pointer hover:shadow-lg hover:shadow-primary/30 focus:shadow-none focus:outline focus:outline-primary/30 uppercase px-16 py-3">
+            Join Our Community
+          </div>
+        </span> */}
+        <Jarallax
+          className="flex items-center md:py-80 py-44 jarallax"
+          data-jarallax
+          data-speed="0.5"
+          style={{ background: `url(${coworking2}) center no-repeat`, backgroundSize: 'cover' }}
+        />
+      </section>
+    </>
+  )
+}
+
+export default Hero

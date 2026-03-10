@@ -1,16 +1,20 @@
 import logoDark from '@/assets/images/logo-dark.png';
 import Icon from '@/components/wrappers/Icon';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 const Page = () => {
+  const location = useLocation()
+  // Ambil email dari state, jika tidak ada pakai placeholder
+  const email = location.state?.email || 'your email address'
+
   return <>
       <div className="min-h-screen flex items-center justify-center">
         <div className="container">
           <div>
             <div className="lg:w-1/2 mx-auto mb-6">
               <div className="flex justify-center mb-6">
-                <Link to="">
+                {/* <Link to="">
                   <img src={logoDark} alt="logo-img" className="h-7" />
-                </Link>
+                </Link> */}
               </div>
               <div className="bg-white shadow-md text-center p-6 rounded-s col-span-6">
                 <h6 className="text-base/[1.6] font-semibold text-default-600 mb-0 mt-4">Please check your inbox</h6>
@@ -18,8 +22,8 @@ const Page = () => {
                   <Icon icon="solar:letter-opened-bold-duotone" className="size-20 text-primary mx-auto" />
                 </div>
                 <p className="text-default-500 text-sm font-medium mb-6">
-                  We sent a confirmation link to you at
-                  <span className="text-default-800 fw-medium">youremail@domain.com</span>
+                  We sent a confirmation link to you at 
+                  <span className="text-default-800 fw-medium">{email}</span>
                 </p>
                 <p className="text-default-500 text-sm font-medium">Simply click on the link available in the email to confirm your account.</p>
               </div>

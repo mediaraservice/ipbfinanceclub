@@ -1,101 +1,110 @@
-import Icon from '@/components/wrappers/Icon';
-import { Link } from 'react-router-dom';
-const ContactUs = () => {
-  return <>
-      <section className="lg:pb-24 py-6 relative">
+import Icon from '@/components/wrappers/Icon'
+import { Link } from 'react-router-dom'
+
+// Social Media Imports
+import igIcon from '@/assets/images/social-media/instagram.svg'
+import ttIcon from '@/assets/images/social-media/tiktok.svg'
+import ytIcon from '@/assets/images/social-media/youtube.svg'
+import liIcon from '@/assets/images/social-media/linkedin.svg'
+import xIcon from '@/assets/images/social-media/x.png'
+
+const ContactPage = () => {
+  const socialLinks = [
+    { img: igIcon, url: 'https://instagram.com/ipbfinanceclub' },
+    { img: ttIcon, url: 'https://tiktok.com/@ipbfinanceclub' },
+    { img: ytIcon, url: 'https://www.youtube.com/@ipbfinanceclub' },
+    { img: liIcon, url: 'https://www.linkedin.com/company/investment-gallery-idx-finance-club-fem-ipb' },
+    { img: xIcon, url: 'https://x.com/ipbfinanceclub' },
+  ]
+
+  return (
+    <>
+      {/* Hero Section */}
+      <section className="bg-default-100 lg:pt-28 sm:pb-36 pb-16 pt-36 relative">
         <div className="container">
-          <div className="lg:flex align-items-center">
-            <div className="lg:w-1/2">
-              <div className="mb-6 relative bg-clip-border rounded-[0.1875rem]">
-                <div className="py-12">
-                  <h2 className="mb-4 text-2xl/6 mt-0 font-medium">Let&apos;s Talk Further</h2>
-                  <p className="mb-12 text-base/6">Please fill out the following form and we will get back to you shortly</p>
-                  <form>
-                    <div className="flex gap-6">
-                      <div className="md:w-1/2">
-                        <div className="mb-5">
-                          <label htmlFor="exampleInputName1" className="block text-sm font-medium mb-1 text-default-600">
-                            Name <span className="text-red-500">*</span>
-                          </label>
-                          <input type="text" className="py-2 px-4 leading-6 block w-full border-default-300 rounded text-sm focus:border-default-300 focus:ring-0" id="exampleInputName1" placeholder="Your Name" />
-                        </div>
-                      </div>
-                      <div className="md:w-1/2">
-                        <div className="mb-5">
-                          <label htmlFor="exampleInputName" className="block text-sm font-medium mb-1 text-default-600">
-                            Name <span className="text-red-500">*</span>
-                          </label>
-                          <input type="text" className="py-2 px-4 leading-6 block w-full border-default-300 rounded text-sm focus:border-default-300 focus:ring-0" id="exampleInputName" placeholder="Your Name" />
-                        </div>
-                      </div>
-                    </div>
-                    <div className="w-full">
-                      <div className="mb-5">
-                        <label htmlFor="exampleInputEmail1" className="block text-sm font-medium mb-1 text-default-600">
-                          Email <span className="text-red-500">*</span>
-                        </label>
-                        <input type="email" className="py-2 px-4 leading-6 block w-full border-default-300 rounded text-sm focus:border-default-300 focus:ring-0" id="exampleInputEmail1" placeholder="Your Email" />
-                      </div>
-                      <div className="mb-5">
-                        <label htmlFor="exampleFormControlTextarea1" className="block text-sm font-medium mb-1 text-default-600">
-                          Message <span className="text-red-500">*</span>
-                        </label>
-                        <textarea className="py-2 px-4 leading-6 block w-full border-default-300 rounded text-sm focus:border-default-300 focus:ring-0" id="exampleFormControlTextarea1" rows={4} placeholder="Type Your Massage..." />
-                      </div>
-                    </div>
-                    <button type="submit" className="inline-flex items-center text-sm bg-primary text-white font-medium leading-6 text-center align-middle select-none py-2 px-4 rounded-md transition-all hover:shadow-lg hover:shadow-primary/80">
-                      Send
-                      <Icon icon="tabler:send-2" className="size-4 ms-1" />
-                    </button>
-                  </form>
-                </div>
-              </div>
-            </div>
-            <div className="lg:w-5/12 ms-auto overflow-x-hidden">
-              <div className="h-[520px]">
-                <div id="marker-map5" className="h-100" data-toggle="map" data-map='{"mapCenter": [40.749179, -73.989276], "zoom": 12, "useTextIcon": false, "interactive": true, "geojson": "/assets/sample-listing-geojson.json" }'>
-                  <iframe className="w-full h-[500px]" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d6030.418742494061!2d-111.34563870463673!3d26.01036670629853!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2smx!4v1471908546569" frameBorder={0} />
-                </div>
-              </div>
+          <div className="flex justify-center">
+            <div className="lg:w-7/12 text-center">
+              <h1 className="text-5xl/relaxed text-default-700 font-bold">Contact Us</h1>
+              <p className="mb-6 md:text-lg text-default-500">Hubungi kami secara langsung melalui WhatsApp atau ikuti media sosial kami.</p>
             </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="flex gap-4 mb-3">
-              <span className="flex items-center justify-center size-12 bg-primary/20 rounded-lg relative shrink-0">
-                <Icon icon="solar:letter-opened-bold-duotone" className="size-7 text-primary" />
-              </span>
-              <div className="grow">
-                <h5 className="text-base text-default-700">Email</h5>
-                <Link to="#" className="text-default-500 my-1">
-                  youremail@gmail.com
-                </Link>
+        </div>
+        {/* Wave Decor */}
+        <div className="absolute -bottom-1 w-full">
+          <svg className="w-full h-full" viewBox="0 0 1440 40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" fillRule="evenodd">
+              <g fill="#fff">
+                <path d="M0,30.013 C239.659,10.004 479.143,0 718.453,0 C957.763,0 1198.28,10.004 1440,30.013 L1440,40 L0,40 L0,30.013 Z" />
+              </g>
+            </g>
+          </svg>
+        </div>
+      </section>
+
+      {/* Main Content Section */}
+      <section className="lg:pb-24 py-12 relative">
+        <div className="container">
+          <div className="max-w-4xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-8">
+              {/* WhatsApp Direct Links */}
+              <div className="space-y-4">
+                <h3 className="text-2xl font-bold mb-6 text-default-800">Direct Message</h3>
+                <a
+                  href="https://wa.me/628563258753"
+                  target="_blank"
+                  className="flex items-center justify-between p-4 bg-white border border-default-200 rounded-2xl hover:shadow-md transition-all group">
+                  <div className="flex items-center gap-4">
+                    <div className="size-12 bg-green-500/10 rounded-full flex items-center justify-center">
+                      <Icon icon="tabler:brand-whatsapp" className="size-7 text-green-600" />
+                    </div>
+                    <span className="font-semibold text-default-700">Sponsorship (Ririn)</span>
+                  </div>
+                  <Icon icon="tabler:chevron-right" className="size-5 text-default-400 group-hover:translate-x-1 transition-transform" />
+                </a>
+
+                <a
+                  href="https://wa.me/62895326191816"
+                  target="_blank"
+                  className="flex items-center justify-between p-4 bg-white border border-default-200 rounded-2xl hover:shadow-md transition-all group">
+                  <div className="flex items-center gap-4">
+                    <div className="size-12 bg-green-500/10 rounded-full flex items-center justify-center">
+                      <Icon icon="tabler:brand-whatsapp" className="size-7 text-green-600" />
+                    </div>
+                    <span className="font-semibold text-default-700">Media Partner (Faiz)</span>
+                  </div>
+                  <Icon icon="tabler:chevron-right" className="size-5 text-default-400 group-hover:translate-x-1 transition-transform" />
+                </a>
               </div>
-            </div>
-            <div className="flex gap-4 mb-3">
-              <span className="flex items-center justify-center size-12 bg-orange-500/20 rounded-lg relative shrink-0">
-                <Icon icon="solar:incoming-call-rounded-bold-duotone" className="size-7 text-orange-500" />
-              </span>
-              <div className="grow">
-                <h5 className="text-base text-default-700">Phone</h5>
-                <Link to="#" className="text-default-500 my-1">
-                  +00 123 456 7890
-                </Link>
-              </div>
-            </div>
-            <div className="flex gap-4 mb-3">
-              <span className="flex items-center justify-center size-12 bg-teal-500/20 rounded-lg relative shrink-0">
-                <Icon icon="solar:map-point-bold-duotone" className="size-7 text-teal-500" />
-              </span>
-              <div className="grow">
-                <h5 className="text-base text-default-700">Address</h5>
-                <Link to="#" className="text-default-500 my-1">
-                  565 Brrom Str, NY
-                </Link>
+
+              {/* Social Media & Email Info */}
+              <div className="bg-default-50 p-8 rounded-3xl border border-default-200 flex flex-col justify-center">
+                <h3 className="text-2xl font-bold mb-4 text-default-800">Our Office</h3>
+                <div className="space-y-4 mb-8">
+                  <div className="flex gap-3">
+                    <Icon icon="solar:letter-opened-bold-duotone" className="size-6 text-primary shrink-0" />
+                    <p className="text-default-600 font-medium text-sm">ipbfinanceclub@gmail.com</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <Icon icon="solar:map-point-bold-duotone" className="size-6 text-teal-500 shrink-0" />
+                    <p className="text-default-600 font-medium text-sm">Investment Gallery FEM IPB, Bogor, Indonesia</p>
+                  </div>
+                </div>
+
+                <p className="font-bold text-default-800 mb-4">Follow Our Journey</p>
+                <div className="flex gap-4">
+                  {socialLinks.map((social, idx) => (
+                    <a key={idx} href={social.url} target="_blank" rel="noreferrer" className="hover:scale-110 transition-transform">
+                      <img src={social.img} alt="social" className="size-8" />
+                    </a>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-    </>;
-};
-export default ContactUs;
+    </>
+  )
+}
+
+export default ContactPage

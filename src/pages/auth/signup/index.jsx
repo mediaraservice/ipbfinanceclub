@@ -30,8 +30,8 @@ const Page = () => {
     if (error) {
       alert(error.message)
     } else {
-      alert('Success! Check your email for a verification link.')
-      navigate('/auth/login')
+      // alert('Success! Check your email for a verification link.')
+      navigate('/auth/confirm', { state: { email: email } })
     }
     setLoading(false)
   }
@@ -42,8 +42,8 @@ const Page = () => {
         <div className="container">
           <div>
             <div className="bg-white shadow rounded mb-6">
-              <div className="grid md:grid-cols-12">
-                <div className="bg-white shadow-md p-12 rounded-s xl:col-span-5 md:col-span-6">
+              <div className="grid">
+                <div className="bg-white shadow-md p-12 rounded-s max-w-100 mx-auto">
                   {/* ... logo section ... */}
                   <h6 className="text-base/[1.6] font-semibold text-default-600 mb-0 mt-4">Create Your Account</h6>
                   <p className="text-default-500 text-sm/[1.6] mt-1 mb-6">
@@ -94,6 +94,14 @@ const Page = () => {
                     </div>
                   </form>
                   {/* ... rest of code ... */}
+                  <div className="mt-6 text-center">
+                    <p className="text-default-500 text-sm">
+                      Already have an account?{' '}
+                      <Link to="/auth/login" className="text-primary font-semibold hover:underline">
+                        Log In
+                      </Link>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

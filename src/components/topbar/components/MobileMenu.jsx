@@ -1,127 +1,13 @@
 import logoDark from '@/assets/images/logo-dark.png';
 import { FaAngleDown, FaXmark } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
-const menuData = [{
-  key: 'home',
-  label: 'Home',
-  href: '/'
-}, {
-  key: 'landing',
-  label: 'Landing',
-  children: [{
-    key: 'app',
-    label: 'App',
-    href: '/landing/app'
-  }, {
-    key: 'saas-modern',
-    label: 'Saas Modern',
-    href: '/landing/sass-modern'
-  }, {
-    key: 'saas-classic',
-    label: 'Saas Classic',
-    href: '/landing/sass-classic'
-  }, {
-    key: 'startup',
-    label: 'Startup',
-    href: '/landing/startup'
-  }, {
-    key: 'software',
-    label: 'Software',
-    href: '/landing/software'
-  }, {
-    key: 'agency',
-    label: 'Agency',
-    href: '/landing/agency'
-  }, {
-    key: 'coworking',
-    label: 'Coworking',
-    href: '/landing/coworking'
-  }, {
-    key: 'crypto',
-    label: 'Crypto',
-    href: '/landing/crypto'
-  }, {
-    key: 'marketing',
-    label: 'Marketing',
-    href: '/landing/marketing'
-  }, {
-    key: 'portfolio-landing',
-    label: 'Portfolio',
-    href: '/landing/portfolio'
-  }]
-}, {
-  key: 'pages',
-  label: 'Pages',
-  children: [{
-    key: 'company',
-    label: 'Company',
-    href: '/pages/company'
-  }, {
-    key: 'career',
-    label: 'Career',
-    href: '/pages/career'
-  }, {
-    key: 'pricing',
-    label: 'Pricing',
-    href: '/pages/pricing'
-  }, {
-    key: 'help',
-    label: 'Help',
-    href: '/pages/help'
-  }]
-}, {
-  key: 'blog',
-  label: 'Blog Page',
-  children: [{
-    key: 'blog-list',
-    label: 'Blog',
-    href: '/pages/blog'
-  }, {
-    key: 'blog-post',
-    label: 'Blog Post',
-    href: '/pages/blog-post'
-  }]
-}, {
-  key: 'portfolio',
-  label: 'Portfolio',
-  children: [{
-    key: 'portfolio-grid',
-    label: 'Portfolio Grid',
-    href: '/pages/portfolio/grid'
-  }, {
-    key: 'portfolio-masonry',
-    label: 'Portfolio Masonry',
-    href: '/pages/portfolio/masonry'
-  }, {
-    key: 'portfolio-item',
-    label: 'Portfolio Item',
-    href: '/pages/portfolio/item'
-  }]
-}, {
-  key: 'account',
-  label: 'Account',
-  children: [{
-    key: 'login',
-    label: 'Login',
-    href: '/auth/login'
-  }, {
-    key: 'signup',
-    label: 'Sign Up',
-    href: '/auth/signup'
-  }, {
-    key: 'forgot-password',
-    label: 'Forget Password',
-    href: '/auth/forget-pass'
-  }, {
-    key: 'confirm-account',
-    label: 'Confirm Account',
-    href: '/auth/confirm'
-  }]
-}, {
-  key: 'contact',
-  label: 'Contact us',
-  href: '/contact'
-}];
+export const menuData = [
+  { key: 'home', label: 'Home', href: '/' },
+  { key: 'about', label: 'About Us', href: '/pages/about' },
+  { key: 'projects', label: 'Projects', href: '/pages/projects' },
+  { key: 'news', label: 'News', href: '/pages/news' },
+  { key: 'contact', label: 'Contact Us', href: '/contact' },
+]
 const MobileMenu = () => {
   const renderMenuItems = (items, level = 0) => {
     return items.map(item => {

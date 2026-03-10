@@ -31,3 +31,5 @@ File: style Css File
 /* @plugin "@iconify/tailwind4" {
     prefixes: tabler, lucide, fa6-solid, fa6-regular, fa6-brands, solar;
 } */
+
+@import "./custom/_tiptap.css";

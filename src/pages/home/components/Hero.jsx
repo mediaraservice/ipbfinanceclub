@@ -1,59 +1,46 @@
-import app from '@/assets/images/demo/home-app.jpg';
-import marketing from '@/assets/images/demo/home-marketing.jpg';
-import portfolio from '@/assets/images/demo/home-portfolio.jpg';
-import sass from '@/assets/images/demo/home-saas.jpg';
-import sass2 from '@/assets/images/demo/home-saas2.jpg';
-import { FaArrowDown } from 'react-icons/fa6';
-import { ReactTyped } from 'react-typed';
-import { Autoplay } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-const SwiperSlider = () => {
-  return <Swiper modules={[Autoplay]} autoplay={{
-    delay: 2500,
-    disableOnInteraction: false
-  }} spaceBetween={30} loop>
-      {[app, portfolio, sass, marketing, sass2].map((img, idx) => {
-      return <SwiperSlide key={idx}>
-            <img width={705} height={440} src={img} alt="saas1" className="w-full h-full rounded-md" />
-          </SwiperSlide>;
-    })}
-    </Swiper>;
-};
+import startup from '@/assets/images/hero/startup.svg'
+import whitewave from '@/assets/images/shapes/white-wave.svg'
+import { Link } from 'react-router-dom'
+
 const Hero = () => {
-  return <>
-      <section className="relative pt-44 pb-36 bg-gradient-to-t from-default-500/10 overflow-x-hidden">
+  return (
+    <section className="bg-gradient-to-t from-yellow-50/80 relative">
+      <section className="relative pt-44 pb-40">
         <div className="container">
-          <div className="grid lg:grid-cols-2 grid-cols-1 gap-16 items-center">
-            <div>
-              <h1 className="md:text-5xl/tight text-3xl font-semibold text-default-700 mb-7">
-                Modern website templates, crafted with Tailwind CSS for
-                <br /> your&nbsp;
-                <ReactTyped strings={['saas', 'mobile app', 'software', 'startup', 'agency', 'portfolio', 'coworking', 'crypto', 'marketing']} className="typewrite capitalize relative after:absolute after:inset-x-0 after:bottom-2 after:bg-green-400/40 after:h-5 after:w-full after:-z-10" typeSpeed={100} backSpeed={50} loop />
+          <div className="grid lg:grid-cols-7 grid-cols-1 gap-16 items-center">
+            <div className="lg:col-span-3 order-2 lg:order-1 text-center sm:text-start">
+              <h1 className="text-3xl/tight sm:text-4xl/tight lg:text-5xl/tight font-semibold mb-7">
+                The Hub for
+                <span className="relative z-0 ml-2 after:bg-yellow-200 after:-z-10 after:absolute after:h-6 after:w-full after:bottom-0 after:end-0">
+                  Future Finance
+                </span>
+                & Investment Leaders
               </h1>
-              <p className="text-default-500 leading-7">
-                The Make your website or web application perfect starting point for your next project and the ultimate resource for learning how
-                experts build real websites with Tailwind CSS.
+              <p className="text-default-500">
+                IPB Finance Club (IFC) memberdayakan mahasiswa melalui literasi keuangan, riset investasi, dan persiapan kompetisi bisnis nasional.
               </p>
-              <div className="flex flex-wrap items-center gap-5 mt-16">
-                <a href="#demo" className="flex gap-3 items-center py-3 px-6 rounded border border-primary text-white bg-primary hover:shadow-lg hover:shadow-primary/50 focus:outline focus:outline-primary/50 transition-all duration-500">
-                  View Demos <FaArrowDown />
-                </a>
+              <div className="flex gap-4 mt-16 justify-center sm:justify-start">
+                <Link to="/pages/about" className="bg-primary text-white rounded-md hover:shadow-lg hover:shadow-primary/30 py-2 px-6 transition-all">
+                  About Us
+                </Link>
+                <Link
+                  to="/pages/news"
+                  className="border border-primary text-primary rounded-md hover:bg-primary hover:text-white py-2 px-6 transition-all">
+                  Latest News
+                </Link>
               </div>
             </div>
-            <div className="order-1 lg:order-2">
-              <div className="relative">
-                <div className="hidden sm:block">
-                  <div className="before:w-24 before:h-24 before:absolute before:-bottom-8 before:-start-8 before:bg-[url('../images/pattern/dot2.svg')]"></div>
-                  <div className="after:w-24 after:h-24 after:absolute after:-top-10 after:end-10 2xl:after:end-0 after:rotate-45 after:bg-[url('../images/pattern/dot5.svg')]"></div>
-                </div>
-                <div id="swiper_one" className="swiper border-[6px] border-white bg-white 2xl:w-[140%] shadow" data-aos="fade-left" data-aos-duration={1000}>
-                  <SwiperSlider />
-                </div>
-              </div>
+            <div className="lg:col-span-4 order-1 lg:order-2" data-aos="fade-left" data-aos-duration={1000}>
+              <img src={startup} alt="IFC Illustration" />
             </div>
           </div>
         </div>
       </section>
-    </>;
-};
-export default Hero;
+      <div className="absolute bottom-0 inset-x-0 hidden sm:block">
+        <img src={whitewave} alt="svg" className="w-full -scale-x-100 -scale-y-100" />
+      </div>
+    </section>
+  )
+}
+
+export default Hero

@@ -7,11 +7,11 @@ const Page = () => {
           <div>
             <div className="lg:w-1/2 mx-auto mb-6">
               <div className="bg-white shadow-md p-12 rounded-s col-span-6">
-                <div className="mb-12">
+                {/* <div className="mb-12">
                   <Link to="/">
                     <img src={logodark} alt="logo-img" className="h-8" width={126} height={32} />
                   </Link>
-                </div>
+                </div> */}
                 <h6 className="text-base/[1.6] font-semibold text-default-600 mb-0 mt-4">Reset Password</h6>
                 <p className="text-default-500 text-sm/[1.6] mt-1 mb-6">
                   Enter your email address and we&apos;ll send you an email with instructions to reset your password.

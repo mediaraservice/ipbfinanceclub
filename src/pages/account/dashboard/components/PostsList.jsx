@@ -135,7 +135,7 @@ const PostsList = () => {
           filteredPosts.map((post) => {
             const statusInfo = getPublishStatus(post)
             return (
-              <div key={post.id} className="flex items-center gap-4 p-3 bg-white border border-default-100 rounded-xl hover:shadow-sm transition-all">
+              <div key={post.id} className="flex flex-col md:flex-row items-center gap-4 p-3 bg-white border border-default-100 rounded-xl hover:shadow-sm transition-all">
                 {/* Thumbnail */}
                 <div className="size-20 bg-gray-100 border border-default-200 rounded-lg overflow-hidden shrink-0">
                   {post.thumbnail_url ? (
