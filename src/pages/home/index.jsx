@@ -3,11 +3,11 @@ import FeatureSection from './components/FeatureSection'
 import { Link } from 'react-router-dom'
 import Footer from '@/components/footer'
 import Topbar from '@/components/topbar'
-import igIcon from '@/assets/images/social-media/instagram.svg'
-import ttIcon from '@/assets/images/social-media/tiktok.svg'
-import ytIcon from '@/assets/images/social-media/youtube.svg'
-import liIcon from '@/assets/images/social-media/linkedin.svg'
-import xIcon from '@/assets/images/social-media/x.png'
+import igIcon from '@/assets/images/social-media/white/instagram.svg'
+import ttIcon from '@/assets/images/social-media/white/tiktok.svg'
+import ytIcon from '@/assets/images/social-media/white/youtube.png'
+import liIcon from '@/assets/images/social-media/white/linkedin.png'
+import xIcon from '@/assets/images/social-media/white/x.svg'
 
 const Home = () => {
   return (
@@ -36,7 +36,7 @@ const Home = () => {
       <FeatureSection type="projects" />
 
       {/* News Preview */}
-      <div className="bg-default-50/50">
+      <div className="bg-[#dbbaa7]/10">
         <FeatureSection type="news" />
       </div>
 

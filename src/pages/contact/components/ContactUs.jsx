@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 // Social Media Imports
 import igIcon from '@/assets/images/social-media/instagram.svg'
 import ttIcon from '@/assets/images/social-media/tiktok.svg'
-import ytIcon from '@/assets/images/social-media/youtube.svg'
-import liIcon from '@/assets/images/social-media/linkedin.svg'
+import ytIcon from '@/assets/images/social-media/youtube.png'
+import liIcon from '@/assets/images/social-media/linkedin.png'
 import xIcon from '@/assets/images/social-media/x.png'
 
 const ContactPage = () => {
@@ -94,7 +94,7 @@ const ContactPage = () => {
                 <div className="flex gap-4">
                   {socialLinks.map((social, idx) => (
                     <a key={idx} href={social.url} target="_blank" rel="noreferrer" className="hover:scale-110 transition-transform">
-                      <img src={social.img} alt="social" className="size-8" />
+                      <img src={social.img} alt="social" className="h-8" />
                     </a>
                   ))}
                 </div>

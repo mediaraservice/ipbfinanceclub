@@ -17,8 +17,11 @@ const Header = ({ theme }) => {
         <div className="container">
           <nav className="flex items-center">
             <Link to="/">
-              <img src={logodark} className="h-10 logo-dark w-auto" alt="IFC Logo" />
-              <img src={logolight} className="h-10 logo-light w-auto" alt="IFC Logo" />
+              <div className='flex items-center gap-2'>
+                <img src={logodark} className="h-10 logo-dark w-auto" alt="IFC Logo" />
+                <img src={logolight} className="h-10 logo-light w-auto" alt="IFC Logo" />
+                <h2 className="text-2xl font-bold text-default-800">IPB Finance Club</h2>
+              </div>
             </Link>
 
             <div className="hidden lg:block ms-auto">

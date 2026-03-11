@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
-    <section className="bg-gradient-to-t from-yellow-50/80 relative">
+    <section className="bg-gradient-to-t from-[#dbbaa7]/10 relative">
       <section className="relative pt-44 pb-40">
         <div className="container">
           <div className="grid lg:grid-cols-7 grid-cols-1 gap-16 items-center">

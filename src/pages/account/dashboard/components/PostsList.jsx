@@ -48,16 +48,18 @@ const PostsList = () => {
 
   // --- SHARE FUNCTION ---
   const handleShare = (post) => {
+    const baseUrl = window.location.origin // ini akan mengambil http://localhost:5173
+    const fullLink = `${baseUrl}/ipbfinanceclub/pages/${post.type.toLowerCase()}/${post.id}`
     if (navigator.share) {
       navigator
         .share({
           title: post.title,
-          url: `${window.location.origin}/post/${post.id}`,
+          url: fullLink,
         })
         .catch(console.error)
     } else {
       // Fallback: Copy to clipboard
-      navigator.clipboard.writeText(`${window.location.origin}/post/${post.id}`)
+      navigator.clipboard.writeText(fullLink)
       alert('Link copied to clipboard!')
     }
   }

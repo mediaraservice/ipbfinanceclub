@@ -7,19 +7,22 @@ File: style Css File
 */
 
 @theme {
-  --font-body: 'Be Vietnam Pro', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
 
-  --color-primary: var(--color-blue-600);
+  /* Primary: Biru Gelap Profesional */
+  --color-primary: #3b4883;
 
-  --color-default-50: var(--color-slate-50);
-  --color-default-100: var(--color-slate-100);
-  --color-default-200: var(--color-slate-200);
-  --color-default-300: var(--color-slate-300);
-  --color-default-400: var(--color-slate-400);
-  --color-default-500: var(--color-slate-500);
-  --color-default-600: var(--color-slate-600);
-  --color-default-700: var(--color-slate-700);
-  --color-default-800: var(--color-slate-800);
-  --color-default-900: var(--color-slate-900);
-  --color-default-950: var(--color-slate-950);
+  /* Default Colors (Shades of Blue-Grey) */
+  /* Diatur dari paling terang (50) ke paling gelap (950) */
+  --color-default-50: #f4f5f8; /* Sangat terang untuk background */
+  --color-default-100: #e9eaf0;
+  --color-default-200: #d2d5e1;
+  --color-default-300: #adb3c9;
+  --color-default-400: #838bae;
+  --color-default-500: #5f6892; /* Warna tengah, senada dengan primary */
+  --color-default-600: #4b5274;
+  --color-default-700: #3b415c;
+  --color-default-800: #2c3044;
+  --color-default-900: #202124; /* Ungu gelap/hitam dari paletmu */
+  --color-default-950: #16181d; /* Super gelap untuk teks kontras tinggi */
 }
